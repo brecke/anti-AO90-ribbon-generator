@@ -1,0 +1,34 @@
+<!doctype html>
+<html ng-app>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Desacordo ortografico ribbon generator</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="app.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div ng-app id="container">
+      <div>
+        <label id="message">Mensagem:</label>
+        <input type="text" ng-model="message" placeholder="Ignoro o AO90">
+        <label id="url">URL:</label>
+        <input type="text" ng-model="url" placeholder="http://">
+        <label id="code">Código:</label>
+        <textarea>
+&lt;style&gt;#antiAO90 a{background:#000;color:#fff;text-decoration:none;font-family:arial, sans-serif;text-align:center;font-weight:bold;padding:5px 40px;font-size:1rem;line-height:2rem;position:relative;transition:0.5s;}#antiAO90 a:hover{background:#060;color:#fff;}#antiAO90 a::before,#antiAO90 a::after{content:&quot;&quot;;width:100%;display:block;position:absolute;top:1px;left:0;height:1px;background:#fff;}#antiAO90 a::after{bottom:1px;top:auto;}@media screen and (min-width:800px){#antiAO90{position:absolute;display:block;top:0;right:0;width:200px;overflow:hidden;height:200px;}#antiAO90 a{width:200px;position:absolute;top:60px;right:-60px;transform:rotate(45deg);-webkit-transform:rotate(45deg);box-shadow:4px 4px 10px rgba(0,0,0,0.8);}}&lt;/style&gt;&lt;span id=&quot;antiAO90&quot;&gt;&lt;a href=&quot;{{url}}&quot;&gt;{{message}}&lt;/a&gt;&lt;/span&gt;
+        </textarea>
+      </div>
+
+      <p>
+        Heavily inspired on <a href="http://codepo8.github.io/css-fork-on-github-ribbon/">css-fork-on-github-ribbon</a>
+      </p>
+    </div>
+
+    <style>#antiAO90 a{background:#000;color:#fff;text-decoration:none;font-family:arial, sans-serif;text-align:center;font-weight:bold;padding:5px 40px;font-size:1rem;line-height:2rem;position:relative;transition:0.5s;}#antiAO90 a:hover{background:#060;color:#fff;}#antiAO90 a::before,#antiAO90 a::after{content:"";width:100%;display:block;position:absolute;top:1px;left:0;height:1px;background:#fff;}#antiAO90 a::after{bottom:1px;top:auto;}@media screen and (min-width:800px){#antiAO90{position:absolute;display:block;top:0;right:0;width:200px;overflow:hidden;height:200px;}#antiAO90 a{width:200px;position:absolute;top:60px;right:-60px;transform:rotate(45deg);-webkit-transform:rotate(45deg);box-shadow:4px 4px 10px rgba(0,0,0,0.8);}}</style><span id="antiAO90"><a href="http://www.miguellaginha.com/desacordo_ortografico/">{{message}}</a></span>
+    </body>
+</html>
